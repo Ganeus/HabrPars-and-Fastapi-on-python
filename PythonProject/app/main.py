@@ -41,7 +41,7 @@ def start_scheduler():
     logger.info("Планировщик запущен: интервал 1 минут")
 
 
-# --- РОУТЫ ---
+#РОУТЫ 
 @app.get("/api/articles", response_model=List[schemas.ArticleResponse])
 def get_articles(
         search: Optional[str] = Query(None, description="Поиск по заголовку или тексту статьи"),
